@@ -10,24 +10,24 @@ Este é um projeto correspondente ao desafio da primeira fase do processo seletiv
 3.  Aperte F5.
 
 ## Endpoints
- **Fundos**
-`GET api/Fundos` Lista os fundos.
-`GET api/Fundos/id` Mostra um fundo específico.
-`POST api/Fundos` Adiciona um fundo novo na lista.
-`DELETE api/Fundos/id` Remove um fundo da lista.
-`PUT api/Fundos/id` Atualiza um fundo.
+ **Fundos**   
+`GET api/Fundos` Lista os fundos.   
+`GET api/Fundos/id` Mostra um fundo específico.   
+`POST api/Fundos` Adiciona um fundo novo na lista.   
+`DELETE api/Fundos/id` Remove um fundo da lista.   
+`PUT api/Fundos/id` Atualiza um fundo.   
 
-**Operações (Aplicação e Resgate)**
-`GET api/Operacoes` Lista as operações.
-`GET api/Operacoes/id` Mostra uma operação específico.
-`POST api/Operacoes` Adiciona/Realiza uma nova operação.
-`DELETE api/Operacoes/id` Remove uma operação da lista.
+**Operações (Aplicação e Resgate)**   
+`GET api/Operacoes` Lista as operações.   
+`GET api/Operacoes/id` Mostra uma operação específico.   
+`POST api/Operacoes` Adiciona/Realiza uma nova operação.   
+`DELETE api/Operacoes/id` Remove uma operação da lista.   
 `PUT api/Operacoes/id` Atualiza uma operação.
 
 ## Json Format
 
 **Fundos**
-```json
+```yaml
 {
     "id": "Id do Fundo" (guid)
     "nome": "Nome do Fundo" (string)
@@ -36,7 +36,7 @@ Este é um projeto correspondente ao desafio da primeira fase do processo seletiv
 }
 ```
 **Operações**
-```json
+```yaml
 {
     "id": "Id da operação" (guid)
     "tipoOperacao": "Tipo de Operação (Aplicação ou Resgate)" (enum) 
@@ -47,4 +47,3 @@ Este é um projeto correspondente ao desafio da primeira fase do processo seletiv
 }
 ```
 ##### **O Id é gerado automaticamente ao utilizar o método POST.*
-
