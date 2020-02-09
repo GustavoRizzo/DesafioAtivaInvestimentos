@@ -1,0 +1,95 @@
+﻿<!-- Fundos -->
+<div id="intro">
+    <h1 id="titulo">FUNDOS DE INVESTIMENTO</h1>
+    <h2 id="paragrafoIntro">
+        Invista em fundos e diversifique seus investimentos rentabilizando ainda mais a sua carteira.
+        Selecionamos os melhores fundos de diversas categorias de acordo com o seu perfil de investimentos.
+        Compare, escolha e invista no melhor fundo para você.
+    </h2>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Invesimento Inicial Minimo</th>
+            <th>Id</th>
+            <th>Ações</th>
+        </tr>
+        <tbody id="fundos"></tbody>
+    </table>
+</div>
+<!-- Fim dos Fundos -->
+
+<!-- Histórico de Operações -->
+<div id="historicoOperacoes">
+    <h1 id="titulo">Histórico de Operações</h1>
+    <h2 id="paragrafoIntro">
+        Veja aqui todas as operações que você fez em nossa plataforma.
+    </h2>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>Tipo</th>
+            <th>Id do Fundo</th>
+            <th>CPF</th>
+            <th>Valor</th>
+            <th>Data da Movimentação</th>
+        </tr>
+        <tbody id="operacoes"></tbody>
+    </table>
+</div>
+<!-- Fim do Histórico de Operações -->
+
+<!-- Modal -->
+<div class="modal fade" id="modalOperacao" tabindex="-1" role="dialog" aria-labelledby="modalOperacaoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalOperacaoTitulo">New message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario de Operação -->
+                <form action="javascript:void(0);" method="POST" onsubmit="addOperacao()" id="operacaoForm">
+
+                    <div class="form-group">
+                        <label for="tipoOperacao">Tipo de Operação</label>
+                        <select id="add-tipo" name="tipoOperacao" form="operacaoForm" required>
+                            <option value="Aplicacao">Aplicacao</option>
+                            <option value="Resgate">Resgate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="display: none">
+                        <label for="nomeDoFundo">Fundo</label>
+                        <input type="text" id="add-fundo-nome" placeholder="Fundo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpfCliente">CPF</label>
+                        <input type="text" id="add-cpf-cliente" placeholder="CPF" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="valorMovimentação">Valor da Movimentação</label>
+                        <input type="number" step="0.01" id="add-valor-movimentacao" min="" placeholder="Valor" required>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        <button id="enviarOperacao" type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+
+                </form>
+                <!-- Fim do Formulario de Operação -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim do Modal -->
