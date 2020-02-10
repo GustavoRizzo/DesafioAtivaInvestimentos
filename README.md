@@ -1,28 +1,34 @@
 ## Desafio Ativa Investimentos
 
-Este é um projeto correspondente ao desafio da primeira fase do processo seletivo da Ativa Investimentos. O projeto consiste em uma API Rest que permite a listagem, aplicação e resgate em fundos de investimento e uma página simples para acessar os endpoints da API no frontend.
+Este Ã© um projeto correspondente ao desafio da primeira fase do processo seletivo da Ativa Investimentos. O projeto consiste em uma API Rest que permite a listagem, aplicaÃ§Ã£o e resgate em fundos de investimento e uma pÃ¡gina simples para acessar os endpoints da API no frontend.
 
 
 ## Build
-
-1.  Clone o repositório
-2.  Abra `AtivaAPI.sln`.
+**Visual Studio**
+1.  Clone o repositÃ³rio.
+2.  Abra `AtivaAPI.sln` no Visual Studio.
 3.  Aperte F5.
+
+**Docker**
+1.  VÃ¡ atÃ© pÃ¡gina principal do app no terminal.
+2.  Digite `docker build -t ativaapi .`
+3.  Digite `docker run -d -p 8080:80 --name ativaapicontainer ativaapi`
+4.  Abra `localhost:8080` no seu navegador.
 
 ## Endpoints
  **Fundos**   
 `GET api/Fundos` Lista os fundos.   
-`GET api/Fundos/id` Mostra um fundo específico.   
+`GET api/Fundos/id` Mostra um fundo especÃ­fico.   
 `POST api/Fundos` Adiciona um fundo novo na lista.   
 `DELETE api/Fundos/id` Remove um fundo da lista.   
 `PUT api/Fundos/id` Atualiza um fundo.   
 
-**Operações (Aplicação e Resgate)**   
-`GET api/Operacoes` Lista as operações.   
-`GET api/Operacoes/id` Mostra uma operação específico.   
-`POST api/Operacoes` Adiciona/Realiza uma nova operação.   
-`DELETE api/Operacoes/id` Remove uma operação da lista.   
-`PUT api/Operacoes/id` Atualiza uma operação.
+**OperaÃ§Ãµes (AplicaÃ§Ã£o e Resgate)**   
+`GET api/Operacoes` Lista as operaÃ§Ãµes.   
+`GET api/Operacoes/id` Mostra uma operaÃ§Ã£o especÃ­fico.   
+`POST api/Operacoes` Adiciona/Realiza uma nova operaÃ§Ã£o.   
+`DELETE api/Operacoes/id` Remove uma operaÃ§Ã£o da lista.   
+`PUT api/Operacoes/id` Atualiza uma operaÃ§Ã£o.
 
 ## Json Format
 
@@ -35,15 +41,15 @@ Este é um projeto correspondente ao desafio da primeira fase do processo seletiv
     "investimentoMinimo": "Investimento Minimo" (decimal)
 }
 ```
-**Operações**
+**OperaÃ§Ãµes**
 ```yaml
 {
-    "id": "Id da operação" (guid)
-    "tipoOperacao": "Tipo de Operação (Aplicação ou Resgate)" (enum) 
+    "id": "Id da operaÃ§Ã£o" (guid)
+    "tipoOperacao": "Tipo de OperaÃ§Ã£o (AplicaÃ§Ã£o ou Resgate)" (enum) 
     "idFundo": "Id do fundo" (guid)
     "cpfCliente": "Cpf do cliente" (string)
-    "valorMovimentacao": "Valor da movimentação" (decimal)
-    "dataMovimentacao": "Data da movimentação" (datetime)
+    "valorMovimentacao": "Valor da movimentaÃ§Ã£o" (decimal)
+    "dataMovimentacao": "Data da movimentaÃ§Ã£o" (datetime)
 }
 ```
-##### **O Id é gerado automaticamente ao utilizar o método POST.*
+##### **O Id Ã© gerado automaticamente ao utilizar o mÃ©todo POST.*
