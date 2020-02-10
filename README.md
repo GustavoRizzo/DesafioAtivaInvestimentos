@@ -52,4 +52,4 @@ Este é um projeto correspondente ao desafio da primeira fase do processo seleti
     "dataMovimentacao": "Data da movimentação" (datetime)
 }
 ```
-##### **O Id é gerado automaticamente ao utilizar o método POST.*
+##### **Os campos id (dos dois objetos) e dataMovimentacao das Operações são gerados automaticamente ao utilizar o método POST.*
