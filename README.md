@@ -25,7 +25,7 @@ Este é um projeto correspondente ao desafio da primeira fase do processo seleti
 
 **Operações (Aplicação e Resgate)**   
 `GET api/Operacoes` Lista as operações.   
-`GET api/Operacoes/id` Mostra uma operação específico.   
+`GET api/Operacoes/id` Mostra uma operação específica.   
 `POST api/Operacoes` Adiciona/Realiza uma nova operação.   
 `DELETE api/Operacoes/id` Remove uma operação da lista.   
 `PUT api/Operacoes/id` Atualiza uma operação.
