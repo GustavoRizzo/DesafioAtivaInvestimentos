@@ -73,7 +73,8 @@
 
                     <div class="form-group">
                         <label for="cpfCliente">CPF</label>
-                        <input type="text" id="add-cpf-cliente" placeholder="CPF" required>
+                        <!-- Valida o cpf e modifica a mensagem de erro ao tentar dar submit e ao começar a escrever o input -->
+                        <input type="text" id="add-cpf-cliente" pattern="\d{11}" placeholder="CPF" oninvalid="this.setCustomValidity('Por favor digite um CPF válido.')" oninput="setCustomValidity(' ')" required />
                     </div>
 
                     <div class="form-group">
